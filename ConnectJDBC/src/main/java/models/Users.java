@@ -1,5 +1,6 @@
 package models;
 
+import java.sql.Date;
 import java.time.LocalDateTime;
 
 public class Users {
@@ -12,6 +13,12 @@ public class Users {
     private LocalDateTime dateModified;
 
     public Users() {}
+
+    public Users(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
 
     public Users(Integer id, String username, String email, String password, LocalDateTime dateCreated, LocalDateTime dateModified) {
         this.id = id;

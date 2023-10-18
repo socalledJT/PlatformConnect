@@ -7,6 +7,11 @@ public class Posts {
     public Posts() {
     }
 
+    public Posts(String title, String body) {
+        this.title = title;
+        this.body = body;
+    }
+
     public Posts(Integer id, String title, String body, Integer userId, LocalDateTime dateCreated, LocalDateTime dateModified) {
         this.id = id;
         this.title = title;
@@ -20,6 +25,8 @@ public class Posts {
     private String title;
     private String body;
     private Integer userId;
+    private LocalDateTime dateCreated;
+    private LocalDateTime dateModified;
 
 
     public Integer getId() {
@@ -50,10 +57,9 @@ public class Posts {
         return userId;
     }
 
-    // Can't Set User Id since it is a foreign key
-//    public void setUserId(Integer userId) {
-//        this.userId = userId;
-//    }
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 
     public LocalDateTime getDateCreated() {
         return dateCreated;
@@ -71,8 +77,6 @@ public class Posts {
         this.dateModified = dateModified;
     }
 
-    private LocalDateTime dateCreated;
-    private LocalDateTime dateModified;
 
     @Override
     public String toString() {

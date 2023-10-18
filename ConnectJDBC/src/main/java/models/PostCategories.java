@@ -10,6 +10,8 @@ public class PostCategories {
     private LocalDateTime dateCreated;
     private LocalDateTime dateModified;
 
+    public PostCategories() {
+    }
     public void setId(Integer id) {
         this.id = id;
     }
@@ -50,8 +52,6 @@ public class PostCategories {
         return dateModified;
     }
 
-    public PostCategories() {
-    }
 
     @Override
     public String toString() {
