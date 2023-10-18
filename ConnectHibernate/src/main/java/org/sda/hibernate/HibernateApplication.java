@@ -1,4 +1,4 @@
-package org.sda;
+package org.sda.hibernate;
 
 import org.springframework.boot.SpringApplication;
 
