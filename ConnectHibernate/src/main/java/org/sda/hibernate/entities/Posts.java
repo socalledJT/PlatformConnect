@@ -15,14 +15,22 @@ public class Posts {
     private String title;
     @Column(name = "body")
     private String body;
-    @Column(name = "user_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
     private Users userId;
     @Column(name = "date_created")
+    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime dateCreated;
     @Column(name = "date_modified")
+    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime dateModified;
 
     public Posts() {
+    }
+
+    public Posts(String title, String body) {
+        this.title = title;
+        this.body = body;
     }
 
     public Posts(Integer id, String title, String body, Users userId, LocalDateTime dateCreated, LocalDateTime dateModified) {

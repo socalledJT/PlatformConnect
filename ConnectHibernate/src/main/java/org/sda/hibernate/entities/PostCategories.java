@@ -11,13 +11,17 @@ public class PostCategories {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "post_id")
+    @OneToMany
+    @JoinColumn(name = "post_id", referencedColumnName = "id")
     private Posts postId;
-    @Column(name = "category_id")
+    @OneToMany
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Categories categoryId;
     @Column(name = "date_created")
+    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime dateCreated;
     @Column(name = "date_modified")
+    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime dateModified;
 
     public PostCategories() {

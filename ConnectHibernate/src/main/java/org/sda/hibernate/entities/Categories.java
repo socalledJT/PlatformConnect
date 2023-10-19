@@ -14,8 +14,10 @@ public class Categories {
     @Column(name = "name")
     private String name;
     @Column(name = "date_created")
+    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime dateCreated;
     @Column(name = "date_modified")
+    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime dateModified;
 
     public Categories() {
@@ -26,6 +28,10 @@ public class Categories {
         this.name = name;
         this.dateCreated = dateCreated;
         this.dateModified = dateModified;
+    }
+
+    public Categories(String name) {
+        this.name = name;
     }
 
     public Integer getId() {

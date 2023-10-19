@@ -18,11 +18,19 @@ public class Users {
     @Column(name = "password")
     private String password;
     @Column(name = "date_created")
+    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime dateCreated;
     @Column(name = "date_modified")
+    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime dateModified;
 
     public Users() {
+    }
+
+    public Users(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
     }
 
     public Users(Integer id, String username, String email, String password, LocalDateTime dateCreated, LocalDateTime dateModified) {
