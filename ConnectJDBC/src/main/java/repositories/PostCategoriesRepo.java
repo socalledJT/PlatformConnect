@@ -19,8 +19,8 @@ public class PostCategoriesRepo {
     private static final String INSERT_POSTCATEGORY_INFO = "INSERT INTO post_categories " +
             "(post_id, category_id, date_created, date_modified) " +
             "values (?, ?, ?, ?)";
-    private static final String TRANFER_POST_ID = "SELECT id FROM posts WHERE title = '?'";
-    private static final String TRANFER_CATEGORY_ID = "SELECT id FROM categories WHERE name = '?'";
+    private static final String TRANFER_POST_ID = "SELECT id FROM posts WHERE title = ?";
+    private static final String TRANFER_CATEGORY_ID = "SELECT id FROM categories WHERE name = ?";
     private static final String FIND_POSTCATEGORY_BYID = "SELECT * FROM post_categories WHERE id = ?";
     private static final String FIND_ALL = "SELECT * FROM post_categories";
 

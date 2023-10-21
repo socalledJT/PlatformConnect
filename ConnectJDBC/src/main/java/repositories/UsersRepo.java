@@ -20,8 +20,9 @@ public class UsersRepo {
             "VALUES (?, ?, ?, ?, ?)";
     private static final String FIND_USER_BYID = "SELECT * FROM users WHERE id = ?";
     private static final String FIND_ALL = "SELECT * FROM users";
-    private static final String UPDATE_USER_BYID = "UPDATE users SET username = '?', email = '?', password = '?', date_modified = '?' WHERE id = ?";
-    private static final String DELETE_USER_BYID = "DELETE * FROM users WHERE id = ?";
+    private static final String UPDATE_USER_BYID = "UPDATE users SET " +
+            "username = ?, email = ?, password = ?, date_modified = ? WHERE id = ?";
+    private static final String DELETE_USER_BYID = "DELETE FROM users WHERE id = ?";
 
     public UsersRepo() {
         try {

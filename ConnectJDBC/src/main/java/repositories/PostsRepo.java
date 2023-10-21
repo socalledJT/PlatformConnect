@@ -19,11 +19,11 @@ public class PostsRepo {
     private static final String INSERT_POST_INFO = "INSERT INTO posts " +
             "(title, body, user_id, date_created, date_modified) " +
             "values (?, ?, ?, ?, ?)";
-    private static final String TRANFER_USER_ID = "SELECT id FROM users WHERE username = '?'";
+    private static final String TRANFER_USER_ID = "SELECT id FROM users WHERE username = ?";
     private static final String FIND_POST_BYID = "SELECT * FROM posts WHERE id = ?";
     private static final String FIND_ALL = "SELECT * FROM posts";
-    private static final String UPDATE_POST_BYID = "UPDATE posts SET title = '?', body = '?', date_modified = '?' WHERE id = ?";
-    private static final String DELETE_POSTS_BYTITLE = "DELETE * FROM posts WHERE title = '?'";
+    private static final String UPDATE_POST_BYID = "UPDATE posts SET title = ?, body = ?, date_modified = ? WHERE id = ?";
+    private static final String DELETE_POSTS_BYTITLE = "DELETE * FROM posts WHERE title = ?";
 
     public PostsRepo() {
         try {

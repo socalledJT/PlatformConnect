@@ -19,7 +19,7 @@ public class CategoriesRepo {
     private static final String INSERT_CATEGORY_INFO = "INSERT INTO categories (name, date_created, date_modified) VALUES (?, ?, ?)";
     private static final String FIND_CATEGORY_BYID = "SELECT * FROM categories WHERE id = ?";
     private static final String FIND_ALL = "SELECT * FROM categories";
-    private static final String UPDATE_CATEGORY_BYID = "UPDATE categories SET name = '?', date_modified = '?' WHERE id = ?";
+    private static final String UPDATE_CATEGORY_BYID = "UPDATE categories SET name = ?, date_modified = ? WHERE id = ?";
     private static final String DELETE_CATEGORY_BYID = "DELETE * FROM categories WHERE id = ?";
 
     public CategoriesRepo() {

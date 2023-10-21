@@ -4,6 +4,12 @@ import java.time.LocalDateTime;
 
 public class Posts {
 
+    private Integer id;
+    private String title;
+    private String body;
+    private Integer userId;
+    private LocalDateTime dateCreated;
+    private LocalDateTime dateModified;
     public Posts() {
     }
 
@@ -21,12 +27,6 @@ public class Posts {
         this.dateModified = dateModified;
     }
 
-    private Integer id;
-    private String title;
-    private String body;
-    private Integer userId;
-    private LocalDateTime dateCreated;
-    private LocalDateTime dateModified;
 
 
     public Integer getId() {
