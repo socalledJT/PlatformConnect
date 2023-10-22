@@ -7,38 +7,38 @@ CREATE TABLE users
 	username VARCHAR(80),
 	email VARCHAR(100),
 	password VARCHAR(255),
-	date_created datetime,
-	date_modified datetime
+	date_created DATETIME,
+	date_modified DATETIME
 );
 
-create table posts
+CREATE TABLE posts
 (
-	id int auto_increment primary key,
-    title varchar(60),
-    body varchar(255),
-    user_id int,
-    date_created datetime,
-    date_modified datetime,
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(60),
+    body VARCHAR(255),
+    user_id INT,
+    date_created DATETIME,
+    date_modified DATETIME,
     
-    foreign key (user_id) references users (id)
+    FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
-create table categories
+CREATE TABLE categories
 (
-	id int auto_increment primary key,
-    name varchar(60),
-    date_created datetime,
-    date_modified datetime
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(60),
+    date_created DATETIME,
+    date_modified DATETIME
 );
 
-create table post_categories
+CREATE TABLE post_categories
 (
-	id int auto_increment primary key,
-    post_id int,
-    category_id int,
-    date_created datetime,
-    date_modified datetime,
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    post_id INT,
+    category_id INT,
+    date_created DATETIME,
+    date_modified DATETIME,
     
-    foreign key (post_id) references posts (id),
-    foreign key (category_id) references categories (id)
+    FOREIGN KEY (post_id) REFERENCES posts (id),
+    FOREIGN KEY (category_id) REFERENCES categories (id)
 );
